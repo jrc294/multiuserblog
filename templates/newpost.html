@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>My Blog</title>
+	<style type="text/css">
+
+		label .error {
+			color: red;
+			text-align: left;
+			margin-left: 10px;
+			width: 50%;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		textarea {
+			width: 500px;
+			height: 300px;
+		}
+
+		.error {
+			color: red;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+	</style>
+	</head>
+	<body>
+		<form method="post">
+			<h1>
+				My Blog
+			</h1>
+			<h3>new post</h3>
+			<br>
+			<label>subject</label>
+			<input type="text" name="subject" value="{{subject}}">
+			<p>
+			<textarea name="content">{{content}}</textarea>
+			<p>
+			<input type="submit" value="Submit">
+			<div class="error">
+				{{error}}
+			</div>
+		</form>
+	</body>
+</html>

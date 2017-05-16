@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>My Blog</title>
+	<style type="text/css">
+
+		label .error {
+			color: red;
+			text-align: left;
+			margin-left: 10px;
+			width: 50%;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		textarea {
+			width: 500px;
+			height: 300px;
+		}
+
+		.error {
+			color: red;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+	</style>
+	</head>
+	<body>
+		<h1>
+			My Blog
+		</h1>
+		{% for post in posts %}
+			<h3>{{post.subject}}</h3>
+			<hr>
+			<span>{{post.content}}</span>
+			<br>
+			<br>
+			{% if post.userId == userid %}
+			<span><a href="/blog/edit?id={{post.key().id()}}">Edit</a>
+			<span><a href="/blog/delete?id={{post.key().id()}}">Delete</a>
+			{% endif %}
+		{% endfor %}
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>My Blog</title>
+	<style type="text/css">
+
+		label .error {
+			color: red;
+			text-align: left;
+			margin-left: 10px;
+			width: 50%;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		textarea {
+			width: 500px;
+			height: 300px;
+		}
+
+		.error {
+			color: red;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+	</style>
+	</head>
+	<body>
+		<form method="post">
+			<h1>
+				<a href="/">My Blog</a>
+			</h1>
+			<h3>{{blog.subject}}</h3>
+			<hr>
+			<span>{{blog.content}}
+		</form>
+	</body>
+</html>

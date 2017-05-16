@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>User Login</title>
+	<style type="text/css">
+		label span {
+			width: 75px;
+    		display: inline-block;
+    		text-align: right;
+		}
+
+		label .error {
+			color: red;
+			text-align: left;
+			margin-left: 10px;
+			width: 50%;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+	</style>
+	</head>
+	<body>
+		<form method="post">
+			<h1>
+				Login
+			</h1>
+			<label>
+				<span>Username</span>
+				<input type="text" name="username" id="username" value="{{username}}">
+			</label>
+			<label>
+				<span>Password</span>
+				<input type="password" name="password" id="password" value="{{password}}">
+			</label>
+			<label>
+				<span class="error">{{loginerror}}</span>
+			</label>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>

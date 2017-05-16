@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>User Signup</title>
+	<style type="text/css">
+		label span {
+			width: 150px;
+    		display: inline-block;
+    		text-align: right;
+		}
+
+		label .error {
+			color: red;
+			text-align: left;
+			margin-left: 10px;
+			width: 50%;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+	</style>
+	</head>
+	<body>
+		<form method="post">
+			<h1>
+				Signup
+			</h1>
+			<label>
+				<span>Username</span>
+				<input type="text" name="username" id="username" value="{{username}}">
+				<span class="error">{{usernameerror}}</span>
+			</label>
+			<label>
+				<span>Password</span>
+				<input type="password" name="password" id="password" value="{{password}}">
+				<span class="error">{{passworderror}}</span>
+			</label>
+			
+			<label>
+				<span>Verify Password</span>
+				<input type="password" name="verify" id="verify" value="{{verify}}">
+				<span class="error">{{verifyerror}}</span>
+			</label>
+
+			<label>
+				<span>Email (optional)</span>
+				<input type="text" name="email" id="email" value="{{email}}">
+				<span class="error">{{emailerror}}</span>
+			</label>
+			<br>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>
